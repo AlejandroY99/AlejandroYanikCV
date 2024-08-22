@@ -1,0 +1,180 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #3c3c3c;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background-color: #777779;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h1, h2 {
+    color: #151414;
+}
+
+p {
+    line-height: 1.6;
+    color: #0d0808;
+}
+
+.section-title {
+    border-bottom: 2px solid #e30613;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    color: #e30613;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    font-size: 14px;
+    color: #666;
+}
+
+.contact-info a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills li {
+    background-color: #eee;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #e30613;
+    color: white;
+    padding: 10px;
+}
+
+.header .initials {
+    font-size: 2em;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.header p {
+    margin: 0;
+    color: white;
+}
+
+@keyframes neonSpin {
+    0% {
+        box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
+    }
+    25% {
+        box-shadow: 0 0 10px #00fff6, 0 0 20px #00fff6, 0 0 30px #00fff6;
+    }
+    50% {
+        box-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a, 0 0 30px #ff073a;
+    }
+    75% {
+        box-shadow: 0 0 10px #fffc00, 0 0 20px #fffc00, 0 0 30px #fffc00;
+    }
+    100% {
+        box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
+    }
+}
+
+#datetime {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    text-align: center;
+    color: #39ff14; /* Neon green color */
+    background-color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    animation: neonSpin 5s infinite, rotate 5s infinite linear;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.icon{
+    width: 5.625rem;
+    height: 5.625rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+}
+
+.icon:hover > i {
+    scale: 1.2;
+    color: #d51111;
+    
+}
+
+
+.icon:before{
+    background: var(--color) ;
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    left: -110%;
+    top: 80%;
+    transform: rotate(45deg);    
+}
+
+.icon:hover:before{
+    animation: slide 0.7s forwards;
+}
+
+:root, :host {
+    --fa-style-family-brands: 'Font Awesome 6 Brands';
+    --fa-font-brands: normal 400 1em/1 'Font Awesome 6 Brands';
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.ttf") format("truetype"); }
+
+@keyframes slide{
+    50%{
+        left:10%;
+        top: -40%;
+    }
+    100%{
+        left: -15%;
+        top: -15%;
+    }
+}
